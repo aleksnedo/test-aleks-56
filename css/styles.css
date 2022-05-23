@@ -1,11 +1,39 @@
-pre {
-  font-family: 'Arial', 'Helvetica', sans-serif;
-  color: #2a2a2a;
-  font-size: 16px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-pre::first-letter {
-  font-family: 'Tahoma', serif;
-  font-size: 32px;
-  color: #f44336;
+.box-1 {
+  width: 180px;
+  height: 80px;
+  background-color: #f44336;
+
+  /*  The value can be pixels  */
+  border-radius: 10px;
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+.box-2 {
+  width: 120px;
+  height: 120px;
+  background-color: #2196f3;
+
+  /*  The value can be percent  */
+  border-radius: 20%;
+}
+
+.box-3 {
+  width: 250px;
+  height: 350px;
+  background-color: #4caf50;
+
+  /*  If the block is a square, settings the radius to 50% will transform it to a circle  */
+  border-radius: 10%;
+}
+
+.box-1,
+.box-2 {
+  margin-bottom: 20px;
 }
