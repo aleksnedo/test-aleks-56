@@ -3,55 +3,48 @@
 }
 
 body {
+  margin: 0;
   font-family: sans-serif;
-  background-color: #f9f9fd;
+  line-height: 1.5;
+  background-color: #edf2f7;
 }
 
-.page-header {
-  /*  Making header.page-header a Flex-container and aligning elements  */
+.container {
+  max-width: 1200px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-set {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  /* Делаем Flex-контейнет многострочным */
+  flex-wrap: wrap;
+  /* Компенсируем маржины элементов */
+  margin-left: -10px;
+  margin-top: -10px;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
   padding: 10px;
-  background-color: #607d8b;
+  /* Задаём всем элементам маржины слева и сверху */
+  margin-left: 10px;
+  margin-top: 10px;
+  /*  Задаём ширину элементов  */
+  flex-basis: calc((100% - 30px) / 3);
+  background-color: #fff;
   border-radius: 4px;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
-.logo {
-  padding: 15px;
-  border-radius: 4px;
-  background-color: #ff5722;
-  text-decoration: none;
-  color: #fff;
+.item h2 {
+  margin-top: 0;
+  font-size: 20px;
 }
 
-.menu {
-  display: flex;
-  padding: 15px;
+.item p {
   margin: 0;
-  list-style: none;
-  border-radius: 4px;
-  background-color: #2196f3;
-}
-
-.menu > .item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.menu .link {
-  display: block;
-  padding: 10px;
-  border-radius: 4px;
-  text-decoration: none;
-  color: black;
-  background-color: #fff;
-}
-
-.menu .link:hover,
-.menu .link:focus,
-.logo:hover,
-.logo:focus {
-  text-decoration: underline;
 }
