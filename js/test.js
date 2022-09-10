@@ -449,15 +449,20 @@
 // console.log(topRatedBooks);
 // console.log(booksByAuthor);
 
-const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
-const list = document.querySelector(".list");
+const addListenerBtn = document.querySelector('[data-action="add"]');
+const removeListenerBtn = document.querySelector('[data-action="remove"]');
+const btn = document.querySelector("#btn");
 
-const markup = technologies
-  .map((technology) => `<li class="list-item">${technology}</li>`)
-  .join("");
+const handleClick = () => {
+  console.log("click event listener callback");
+};
 
-// Check the console, you'll see a single string with HTML tags
-console.log(markup);
+addListenerBtn.addEventListener("click", () => {
+  btn.addEventListener("click", handleClick);
+  console.log("click event listener was added to btn");
+});
 
-// Adding all the markup in one operation
-list.innerHTML = markup;
+removeListenerBtn.addEventListener("click", () => {
+  btn.removeEventListener("click", handleClick);
+  console.log("click event listener was removed from btn");
+});
